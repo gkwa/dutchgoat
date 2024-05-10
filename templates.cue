@@ -1,5 +1,28 @@
 package templates
 
+_sharedTemplates: [
+	{
+		template: "cookiecutter/homebrew-and-scoop/cookiecutter.json.j2"
+		path:     "cookiecutter.json"
+	},
+	{
+		template: "README/README.md.j2"
+		path:     "{{ cookiecutter.project_slug }}/README.md"
+	},
+	{
+		template: "gitignore/gitignore2.j2"
+		path:     "{{ cookiecutter.project_slug }}/.gitignore"
+	},
+	{
+		template: "go/go.mod.j2"
+		path:     "{{ cookiecutter.project_slug }}/go.mod"
+	},
+	{
+		template: "cookiecutter/hooks/post_gen_project.py"
+		path:     "hooks/post_gen_project.py"
+	},
+]
+
 dailycould: {
 	templates: _sharedTemplates + [
 		{
@@ -66,26 +89,3 @@ itsvermont: {
 bluesorrow: {
 	templates: _sharedTemplates
 }
-
-_sharedTemplates: [
-	{
-		template: "cookiecutter/homebrew-and-scoop/cookiecutter.json.j2"
-		path:     "cookiecutter.json"
-	},
-	{
-		template: "README/README.md.j2"
-		path:     "{{ cookiecutter.project_slug }}/README.md"
-	},
-	{
-		template: "gitignore/gitignore2.j2"
-		path:     "{{ cookiecutter.project_slug }}/.gitignore"
-	},
-	{
-		template: "go/go.mod.j2"
-		path:     "{{ cookiecutter.project_slug }}/go.mod"
-	},
-	{
-		template: "cookiecutter/hooks/post_gen_project.py"
-		path:     "hooks/post_gen_project.py"
-	},
-]
