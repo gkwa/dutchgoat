@@ -1,0 +1,15 @@
+[submodule "allnew"]
+	path = allnew
+	url = git@github.com:taylormonacelli/allnew.git
+[submodule "awaybeen"]
+	path = awaybeen
+	url = git@github.com:taylormonacelli/awaybeen.git
+[submodule "bluesorrow"]
+	path = bluesorrow
+	url = git@github.com:taylormonacelli/bluesorrow.git
+[submodule "dailycould"]
+	path = dailycould
+	url = git@github.com:taylormonacelli/dailycould.git
+[submodule "itsvermont"]
+	path = itsvermont
+	url = git@github.com:taylormonacelli/itsvermont.git
