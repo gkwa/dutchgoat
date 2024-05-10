@@ -5,6 +5,8 @@ package main
 
 import (
 	"fmt"
+	"os/exec"
+	"strings"
 
 	"github.com/magefile/mage/mg"
 	"github.com/magefile/mage/sh"
@@ -52,7 +54,22 @@ func Lint() error {
 }
 
 func Fmt() error {
-	return sh.Run("gofumpt", "-w", ".")
+	gitCmd := exec.Command("git", "ls-files", "**/*.go")
+	output, err := gitCmd.Output()
+	if err != nil {
+		return err
+	}
+
+	goFiles := strings.Split(string(output), "\n")
+	var args []string
+	args = append(args, "-w")
+	for _, file := range goFiles {
+		if file != "" {
+			args = append(args, file)
+		}
+	}
+
+	return sh.Run("gofumpt", args...)
 }
 
 func Vet() error {
@@ -65,6 +82,23 @@ func Check() {
 
 func Tidy() error {
 	return sh.Run("go", "mod", "tidy")
+}
+
+func ListGoFiles() error {
+	gitCmd := exec.Command("git", "ls-files", "**/*.go")
+	output, err := gitCmd.Output()
+	if err != nil {
+		return err
+	}
+
+	goFiles := strings.Split(string(output), "\n")
+	for _, file := range goFiles {
+		if file != "" {
+			fmt.Println(file)
+		}
+	}
+
+	return nil
 }
 
 func Build() error {
