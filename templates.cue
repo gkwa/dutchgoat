@@ -23,69 +23,61 @@ _sharedTemplates: [
 	},
 ]
 
-dailycould: {
-	templates: _sharedTemplates + [
-		{
-			template: "go/Makefile.j2"
-			path:     "{{ cookiecutter.project_slug }}/Makefile"
-		},
-		{
-			template: "go/magefile.go.j2"
-			path:     "{{ cookiecutter.project_slug }}/magefile.go"
-		},
-		{
-			template: "go/goreleaser/goreleaser.yaml.j2"
-			path:     "{{ cookiecutter.project_slug }}/.goreleaser.yaml"
-		},
-		{
-			template: "go/version/version.go.j2"
-			path:     "{{ cookiecutter.project_slug }}/version/version.go"
-		},
-	]
-}
+dailycould: templates: _sharedTemplates + [
+	{
+		template: "go/Makefile.j2"
+		path:     "{{ cookiecutter.project_slug }}/Makefile"
+	},
+	{
+		template: "go/magefile.go.j2"
+		path:     "{{ cookiecutter.project_slug }}/magefile.go"
+	},
+	{
+		template: "go/goreleaser/goreleaser.yaml.j2"
+		path:     "{{ cookiecutter.project_slug }}/.goreleaser.yaml"
+	},
+	{
+		template: "go/version/version.go.j2"
+		path:     "{{ cookiecutter.project_slug }}/version/version.go"
+	},
+]
 
-allnew: {
-	templates: _sharedTemplates + [
-		{
-			template: "go/Makefile2.j2"
-			path:     "{{ cookiecutter.project_slug }}/Makefile"
-		},
-		{
-			template: "go/magefile2.go.j2"
-			path:     "{{ cookiecutter.project_slug }}/magefile.go"
-		},
-		{
-			template: "go/goreleaser/goreleaser2.yaml.j2"
-			path:     "{{ cookiecutter.project_slug }}/.goreleaser.yaml"
-		},
-		{
-			template: "go/version/version.go.j2"
-			path:     "{{ cookiecutter.project_slug }}/version/version.go"
-		},
-	]
-}
+allnew: templates: _sharedTemplates + [
+	{
+		template: "go/Makefile2.j2"
+		path:     "{{ cookiecutter.project_slug }}/Makefile"
+	},
+	{
+		template: "go/magefile2.go.j2"
+		path:     "{{ cookiecutter.project_slug }}/magefile.go"
+	},
+	{
+		template: "go/goreleaser/goreleaser2.yaml.j2"
+		path:     "{{ cookiecutter.project_slug }}/.goreleaser.yaml"
+	},
+	{
+		template: "go/version/version.go.j2"
+		path:     "{{ cookiecutter.project_slug }}/version/version.go"
+	},
+]
 
-itsvermont: {
-	templates: _sharedTemplates + [
-		{
-			template: "go/Makefile2.j2"
-			path:     "{{ cookiecutter.project_slug }}/Makefile"
-		},
-		{
-			template: "go/magefile2.go.j2"
-			path:     "{{ cookiecutter.project_slug }}/magefile.go"
-		},
-		{
-			template: "go/goreleaser/goreleaser.yaml.j2"
-			path:     "{{ cookiecutter.project_slug }}/.goreleaser.yaml"
-		},
-		{
-			template: "go/version/version.go.j2"
-			path:     "{{ cookiecutter.project_slug }}/version/version.go"
-		},
-	]
-}
+itsvermont: templates: _sharedTemplates + [
+	{
+		template: "go/Makefile2.j2"
+		path:     "{{ cookiecutter.project_slug }}/Makefile"
+	},
+	{
+		template: "go/magefile2.go.j2"
+		path:     "{{ cookiecutter.project_slug }}/magefile.go"
+	},
+	{
+		template: "go/goreleaser/goreleaser.yaml.j2"
+		path:     "{{ cookiecutter.project_slug }}/.goreleaser.yaml"
+	},
+	{
+		template: "go/version/version.go.j2"
+		path:     "{{ cookiecutter.project_slug }}/version/version.go"
+	},
+]
 
-bluesorrow: {
-	templates: _sharedTemplates
-}
+bluesorrow: templates: _sharedTemplates
