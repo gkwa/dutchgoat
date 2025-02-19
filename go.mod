@@ -5,7 +5,7 @@ go 1.22.0
 require (
 	cuelang.org/go v0.12.0
 	github.com/magefile/mage v1.15.0
-	github.com/spf13/cobra v1.9.0
+	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.19.0
 	github.com/taylormonacelli/goldbug v0.0.6
 )
