@@ -3,7 +3,7 @@ module github.com/taylormonacelli/dutchgoat
 go 1.22.0
 
 require (
-	cuelang.org/go v0.12.0
+	cuelang.org/go v0.12.1
 	github.com/magefile/mage v1.15.0
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
