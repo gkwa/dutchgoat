@@ -2,7 +2,7 @@ module github.com/taylormonacelli/dutchgoat
 
 go 1.24.0
 
-toolchain go1.25.7
+toolchain go1.26.0
 
 require (
 	cuelang.org/go v0.15.4
